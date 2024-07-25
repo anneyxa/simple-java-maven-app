@@ -20,9 +20,9 @@ set -x
 VERSION=`mvn -q -DforceStdout help:evaluate -Dexpression=project.version`
 set +x
 
-ls -lsa
-cd target
-ls -lsa
+ls target
+
+java -jar /target/${NAME}-${VERSION}.jar
 
 echo 'The following command runs and outputs the execution of your Java'
 echo 'application (which Jenkins built using Maven) to the Jenkins UI.'
